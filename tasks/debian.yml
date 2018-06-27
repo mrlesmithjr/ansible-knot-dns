@@ -1,0 +1,16 @@
+---
+- name: debian | Adding knot-dns Repository (Debian)
+  apt_repository:
+    repo: "{{ knot_dns_debian_repo }}"
+    state: "present"
+  when: ansible_distribution == "Debian"
+
+- name: debian | Adding knot-dns Repository (Ubuntu)
+  apt_repository:
+    repo: "{{ knot_dns_ubuntu_repo }}"
+    state: "present"
+
+- name: debian | Installing knot-dns
+  apt:
+    name: "knot"
+    state: "present"

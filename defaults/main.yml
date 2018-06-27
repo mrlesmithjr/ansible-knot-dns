@@ -1,0 +1,4 @@
+---
+# defaults file for ansible-knot-dns
+knot_dns_debian_repo: 'deb http://deb.knot-dns.cz/debian/ {{ ansible_distribution_release }} main'
+knot_dns_ubuntu_repo: 'ppa:cz.nic-labs/knot-dns'
